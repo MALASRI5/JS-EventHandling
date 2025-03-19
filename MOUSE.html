@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events Example</title>
+    <style>
+        #myElement {
+            padding: 20px;
+            background-color: lightblue;
+            text-align: center;
+            width: 200px;
+            margin: 100px auto;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="myElement">Mouse over me and click!</div>
+
+<script>
+    // Get the element by its ID
+    const myElement = document.getElementById('myElement');
+
+    // Add mouseover event listener
+    myElement.addEventListener('mouseover', function() {
+        myElement.style.backgroundColor = 'lightgreen';
+        myElement.innerText = 'Mouse is over me!';
+    });
+!
+    // Add mouseout event listener to reset the style when the mouse leaves
+    myElement.addEventListener('mouseout', function() {
+        myElement.style.backgroundColor = 'lightblue';
+        myElement.innerText = 'Mouse over me and click!';
+    });
+
+    // Add click event listener
+    myElement.addEventListener('click', function() {
+        myElement.style.backgroundColor = 'orange';
+        myElement.innerText = 'Clicked!';
+    });
+</script>
+
+</body>
+</html>
